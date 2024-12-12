@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.7.241114004-experimental1" />
+  </ItemGroup>
+   <ItemGroup>
+    <PackageReference Include="Microsoft.Windows.SDK.NET.Ref" Version="10.0.26100.57" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\AIShell.Abstraction\AIShell.Abstraction.csproj">
+      <!-- Disable copying AIShell.Abstraction.dll to output folder -->
+      <Private>false</Private>
+      <!-- Disable copying the transitive dependencies to output folder -->
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </ProjectReference>
+  </ItemGroup>
+</Project>
